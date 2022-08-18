@@ -46,35 +46,44 @@ void searching (int arr[], int arr_num) {
 int main () {
     int n, arr_num, arr[20];
 
-    printf ("How many numbers you want to entered:");
+    printf ("How many elements you want to enter:");
     scanf ("%d", &arr_num);
-    printf ("Enter the Elements into the array: ");
+
+    printf ("Enter the elements into the array: ");
     for (int i = 0; i < arr_num; i++)
         scanf ("%d", &arr[i]);
 
     printf ("Array is: ");
     for (int i = 0; i < arr_num; i++)
-            printf (" %d", arr[i]);
+        printf (" %d", arr[i]);
 
-    printf ("\n----------MENU----------\n");
-    printf ("1.Traversal\n");
-    printf ("2.Searching\n");
-    printf ("3.Sorting\n");
-    printf ("4.Element Insertion\n");
-    printf ("5.Element Deletion\n");
+    while (1) {
+        printf ("\n----------MENU----------\n");
+        printf ("1.Traversal\n");
+        printf ("2.Searching\n");
+        printf ("3.Sorting\n");
+        printf ("4.Element Insertion\n");
+        printf ("5.Element Deletion\n");
+        printf ("0.Exit\n");
+        printf ("\n------------------------\n");
 
-    printf ("Enter the choice: ");
-    scanf ("%d", &n);
+        printf ("Enter the choice: ");
+        scanf ("%d", &n);
 
-    switch (n) {
-    case 1:
-        traversal (arr, arr_num);
-        break;
-    case 2:
-        searching (arr, arr_num);
-        break;
-    default:
-        printf ("------------Invalid Input-----------");
+        if (n == 0)
+            break;
+        else {
+            switch (n) {
+                case 1:
+                    traversal (arr, arr_num);
+                    break;
+                case 2:
+                    searching (arr, arr_num);
+                    break;
+                default:
+                    printf ("------------Invalid Input-----------");
+            }
+        }
     }
     return 0;
 }
