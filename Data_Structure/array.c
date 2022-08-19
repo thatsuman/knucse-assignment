@@ -1,12 +1,19 @@
+/*
+-------------------------------------------------
+Author: Suman Mondal <suman.mondal@outlook.in>
+Compiler version: gcc 9.4.0
+-------------------------------------------------
+*/
+
+
 #include <stdio.h>
 
-//Function for array Display 
+//Function for displaying array
 void display (int arr[], int arr_size) {
     printf ("Array is: ");
     for (int i = 0; i < arr_size; i++)
         printf (" %d", arr[i]);
 }
-
 
 // Function for array traversal
 void traversal (int arr[], int arr_size) {
@@ -19,19 +26,19 @@ void traversal (int arr[], int arr_size) {
     scanf ("%d", &n);
 
     switch (n) {
-    case 1:
-        printf ("Forward Traversed Array is: \n");
-        for (int i = 0; i < arr_size; i++)
-            printf (" %d", arr[i]);
-        break;
-    case 2:
-        printf ("Backward Traversed Array is: \n");
-        for (int i = arr_size - 1; i >= 0; i--)
-            printf (" %d", arr[i]);
-        break;
-    default:
-        printf ("------------Invalid Input-----------");
-      
+        case 1:
+            printf ("Forward Traversed Array is: \n");
+            for (int i = 0; i < arr_size; i++)
+                printf (" %d", arr[i]);
+            break;
+        case 2:
+            printf ("Backward Traversed Array is: \n");
+            for (int i = arr_size - 1; i >= 0; i--)
+                printf (" %d", arr[i]);
+            break;
+        default:
+            printf ("------------Invalid Input-----------");
+        
     }
 }
 
@@ -51,6 +58,11 @@ void searching (int arr[], int arr_size) {
 
 }
 
+//Function for element sorting
+void sorting (int arr[], int arr_size) {
+    
+}
+
 //Function for element insertion
 void insertion (int arr[], int arr_size) {
     int pos, ins_num;
@@ -60,7 +72,7 @@ void insertion (int arr[], int arr_size) {
         scanf ("%d", &pos);
     
     if (pos > arr_size) {
-        printf ("Oops! Array position doesn't exists. Please Insert between 0 to %d\n", arr_size-1);
+        printf ("Oops! Array position doesn't exists. Please Choose between 1 to %d\n", arr_size);
         goto Enter_the_Position;
     }
     
@@ -72,6 +84,27 @@ void insertion (int arr[], int arr_size) {
     arr[pos-1] = ins_num;
 
     arr_size += 1;
+
+    display (arr, arr_size);
+}
+
+//Function for element deletion
+void deletion (int arr[], int arr_size) {
+    int pos;
+
+    Enter_the_Position:
+        printf ("In Which position you want to delete element?\n");
+        scanf ("%d", &pos);
+    
+    if (pos > arr_size) {
+        printf ("Oops! Array position doesn't exists. Please Choose between 1 to %d\n", arr_size);
+        goto Enter_the_Position;
+    }
+
+    for (int i = pos; i < arr_size; i++)
+        arr[i-1] = arr[i];
+    
+    arr_size -= 1;
 
     display (arr, arr_size);
 }
@@ -116,13 +149,13 @@ int main () {
                     searching (arr, arr_size);
                     break;
                 case 3:
-                    // sorting (arr, arr_size);
+                    sorting (arr, arr_size);
                     break;
                 case 4:
                     insertion (arr, arr_size);
                     break;
                 case 5:
-                    // deletion (arr, arr_size);
+                    deletion (arr, arr_size);
                     break;
                 default:
                     printf ("------------Invalid Input-----------");
