@@ -17,4 +17,12 @@ This is a archive of assignments with solutions of Kazi Nazrul University - Comp
 
   - [Data Structure (C)](Data_Structure)
 
-    1. [] [Array](Data_Structure/)
+    1. [x] [Array](Data_Structure/Array/)
+
+    - Traversal
+    - Searching
+    - Sorting
+    - Insertion
+    - Deletion
+
+    2. [x] [Linked List](Data_Structure/Linked_List/)
