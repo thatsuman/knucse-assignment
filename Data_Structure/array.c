@@ -1,7 +1,15 @@
 #include <stdio.h>
 
-// Array Traversal
-void traversal (int arr[], int arr_num) {
+//Function for array Display 
+void display (int arr[], int arr_size) {
+    printf ("Array is: ");
+    for (int i = 0; i < arr_size; i++)
+        printf (" %d", arr[i]);
+}
+
+
+// Function for array traversal
+void traversal (int arr[], int arr_size) {
     int n;
 
     printf ("For Array Traversal, there is: \n");
@@ -13,12 +21,12 @@ void traversal (int arr[], int arr_num) {
     switch (n) {
     case 1:
         printf ("Forward Traversed Array is: \n");
-        for (int i = 0; i < arr_num; i++)
+        for (int i = 0; i < arr_size; i++)
             printf (" %d", arr[i]);
         break;
     case 2:
         printf ("Backward Traversed Array is: \n");
-        for (int i = arr_num - 1; i >= 0; i--)
+        for (int i = arr_size - 1; i >= 0; i--)
             printf (" %d", arr[i]);
         break;
     default:
@@ -27,13 +35,13 @@ void traversal (int arr[], int arr_num) {
     }
 }
 
-//Array Searching
-void searching (int arr[], int arr_num) {
+//Function for element searching
+void searching (int arr[], int arr_size) {
     int element, flag = 0, i;
     printf ("Enter the element you want to search: ");
     scanf ("%d", &element);
 
-    for (i = 0; i < arr_num; i++) {
+    for (i = 0; i < arr_size; i++) {
         if (arr[i] == element) {
             flag = 1;
             break;
@@ -43,19 +51,46 @@ void searching (int arr[], int arr_num) {
 
 }
 
+//Function for element insertion
+void insertion (int arr[], int arr_size) {
+    int pos, ins_num;
+    
+    Enter_the_Position:
+        printf ("In Which position you want to insert element?\n");
+        scanf ("%d", &pos);
+    
+    if (pos > arr_size) {
+        printf ("Oops! Array position doesn't exists. Please Insert between 0 to %d\n", arr_size-1);
+        goto Enter_the_Position;
+    }
+    
+    printf ("Enter the element: ");
+    scanf ("%d", &ins_num);
+
+    for (int i = arr_size-1; i >= pos-1; i--)
+        arr[i+1] = arr[i];
+    arr[pos-1] = ins_num;
+
+    arr_size += 1;
+
+    display (arr, arr_size);
+}
+
+//Main Function
+
 int main () {
-    int n, arr_num, arr[20];
+    int n, arr_size, arr[50];
 
+    //No of elements in the array
     printf ("How many elements you want to enter:");
-    scanf ("%d", &arr_num);
+    scanf ("%d", &arr_size);
 
+    //Input elements in the array
     printf ("Enter the elements into the array: ");
-    for (int i = 0; i < arr_num; i++)
+    for (int i = 0; i < arr_size; i++)
         scanf ("%d", &arr[i]);
-
-    printf ("Array is: ");
-    for (int i = 0; i < arr_num; i++)
-        printf (" %d", arr[i]);
+    
+    display (arr, arr_size);
 
     while (1) {
         printf ("\n----------MENU----------\n");
@@ -75,10 +110,19 @@ int main () {
         else {
             switch (n) {
                 case 1:
-                    traversal (arr, arr_num);
+                    traversal (arr, arr_size);
                     break;
                 case 2:
-                    searching (arr, arr_num);
+                    searching (arr, arr_size);
+                    break;
+                case 3:
+                    // sorting (arr, arr_size);
+                    break;
+                case 4:
+                    insertion (arr, arr_size);
+                    break;
+                case 5:
+                    // deletion (arr, arr_size);
                     break;
                 default:
                     printf ("------------Invalid Input-----------");
