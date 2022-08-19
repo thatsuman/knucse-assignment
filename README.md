@@ -13,6 +13,8 @@ This is a archive of assignments with solutions of Kazi Nazrul University - Comp
 
 📌 Find the course structure & syllabi [here](https://drive.google.com/file/d/1wh-7aXpIE9DjwOM0rEmed5G4p-ZY6U5h/view?usp=sharing)
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Contents 📑
 
 - Third Semester
@@ -29,11 +31,15 @@ This is a archive of assignments with solutions of Kazi Nazrul University - Comp
 
     2. [x] [Linked List](Data_Structure/Linked_List/)
 
+## License
+
+[GNU General Public License v3.0](LICENSE/)
+
 ## Feedback
 
 Any helpful feedback would be appreciated.
 
-[Issues](<(https://github.com/thatsuman/knucse-assignment/issues)>) and PRs are Welcome 💖
+[Issues](https://github.com/thatsuman/knucse-assignment/issues) and PRs are Welcome 💖
 
 ## Project Maintainers 🛠
 
