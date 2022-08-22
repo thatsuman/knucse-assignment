@@ -27,12 +27,12 @@ void traversal (int arr[], int arr_size) {
 
     switch (n) {
         case 1:
-            printf ("Forward Traversed Array is: \n");
+            printf ("Forward Traversed Array is: ");
             for (int i = 0; i < arr_size; i++)
                 printf (" %d", arr[i]);
             break;
         case 2:
-            printf ("Backward Traversed Array is: \n");
+            printf ("Backward Traversed Array is: ");
             for (int i = arr_size - 1; i >= 0; i--)
                 printf (" %d", arr[i]);
             break;
@@ -60,7 +60,24 @@ void searching (int arr[], int arr_size) {
 
 //Function for element sorting
 void sorting (int arr[], int arr_size) {
-    
+
+  // loop to access each arr element
+  for (int step = 0; step < arr_size - 1; ++step) {
+      
+    // loop to compare arr elements
+    for (int i = 0; i < arr_size - step - 1; ++i) {
+      
+      // compare two adjacent elements
+      // change > to < to sort in descending order
+      if (arr[i] > arr[i+1]) {
+        int temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+      }
+    }
+  }
+
+  display (arr, arr_size);
 }
 
 //Function for element insertion
@@ -71,7 +88,7 @@ void insertion (int arr[], int arr_size) {
         printf ("In Which position you want to insert element?\n");
         scanf ("%d", &pos);
     
-    if (pos > arr_size) {
+    if (pos > arr_size || pos < 1) {
         printf ("Oops! Array position doesn't exists. Please Choose between 1 to %d\n", arr_size);
         goto Enter_the_Position;
     }
@@ -96,7 +113,7 @@ void deletion (int arr[], int arr_size) {
         printf ("In Which position you want to delete element?\n");
         scanf ("%d", &pos);
     
-    if (pos > arr_size) {
+    if (pos > arr_size || pos < 1) {
         printf ("Oops! Array position doesn't exists. Please Choose between 1 to %d\n", arr_size);
         goto Enter_the_Position;
     }
