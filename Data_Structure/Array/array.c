@@ -86,7 +86,7 @@ void insertion (int arr[], int arr_size) {
     
     Enter_the_Position:
         printf ("In Which position you want to insert element?\n");
-        scanf ("%d", &pos);
+        scanf ("%d", &pos); //taking actual position not array index
     
     if (pos > arr_size || pos < 1) {
         printf ("Oops! Array position doesn't exists. Please Choose between 1 to %d\n", arr_size);
@@ -100,7 +100,7 @@ void insertion (int arr[], int arr_size) {
         arr[i+1] = arr[i];
     arr[pos-1] = ins_num;
 
-    arr_size += 1;
+    arr_size += 1;    
 
     display (arr, arr_size);
 }
@@ -111,16 +111,16 @@ void deletion (int arr[], int arr_size) {
 
     Enter_the_Position:
         printf ("In Which position you want to delete element?\n");
-        scanf ("%d", &pos);
+        scanf ("%d", &pos); //taking actual position not array index
     
     if (pos > arr_size || pos < 1) {
         printf ("Oops! Array position doesn't exists. Please Choose between 1 to %d\n", arr_size);
         goto Enter_the_Position;
     }
 
-    for (int i = pos; i < arr_size; i++)
-        arr[i-1] = arr[i];
-    
+    for (int i = pos-1; i < arr_size; i++)
+        arr[i] = arr[i+1];
+
     arr_size -= 1;
 
     display (arr, arr_size);
