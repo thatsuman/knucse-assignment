@@ -114,28 +114,6 @@ int main () {
     return 0;
 }
 
-// function for create node
-void create (node *item) {
-    int choice;
-
-    printf ("Enter value for data part in node: ");
-    scanf ("%d", &item->data);
-
-    printf ("----------MENU----------\n");
-    printf ("1.I want to create another node\n");
-    printf ("2.I don't want to create another node\n"); 
-    printf ("Enter the choice: ");
-    scanf ("%d", &choice);
-
-    if (choice == 1) {
-        item->next = (node *) malloc (sizeof(node));
-        create (item->next);
-    }
-    else {
-        item->next = NULL;
-    }
-}
-
 // function for display node data
 void print () {
     node *item;
@@ -168,6 +146,28 @@ int count () {
         }
     }
     return cnt;
+}
+
+// function for create node
+void create (node *item) {
+    int choice;
+
+    printf ("Enter value for data part in node: ");
+    scanf ("%d", &item->data);
+
+    printf ("----------MENU----------\n");
+    printf ("1.I want to create another node\n");
+    printf ("2.I don't want to create another node\n"); 
+    printf ("Enter the choice: ");
+    scanf ("%d", &choice);
+
+    if (choice == 1) {
+        item->next = (node *) malloc (sizeof(node));
+        create (item->next);
+    }
+    else {
+        item->next = NULL;
+    }
 }
 
 // function for insert node at beginning 
