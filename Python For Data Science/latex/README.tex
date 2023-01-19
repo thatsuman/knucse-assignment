@@ -1,0 +1,86 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% **********************************************************
+% Document Settings                                        *
+% **********************************************************
+\usepackage{geometry}
+\geometry{a4paper, margin=0.6in}
+
+\usepackage{graphicx}
+\graphicspath{{../outputs/}}
+
+\usepackage{minted}
+% \usemintedstyle{emacs}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Subject Name}
+\rhead{Suman Mondal}
+% \lfoot{\href{https://github.com/thatsuman/ccpcst-assignment.git}{View on Github}}
+\lfoot{\href{https://github.com/thatsuman}{github.com/thatsuman}}
+\rfoot{Page \thepage}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\urlstyle{same}
+
+\usepackage{fontspec}
+% \setromanfont{Source Sans Pro}
+% \setmonofont{Cascadia Code PL}
+
+
+% macros start here
+\newcommand{\problem}[3]{
+  \section{#3}
+    \underline{{\LARGE Source Code :}}
+    \inputminted[breaklines,fontsize=\Large]{c}{#1.c}
+    \bigbreak
+    \noindent
+    \underline{{\LARGE Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics[height=2.1in]{#2}
+% \newpage
+}
+\newcommand{\subproblem}[3]{
+  \subsection{#3}
+    \underline{\emph{\Large Source Code :}}
+    \inputminted[breaklines]{c}{#1.c}
+    \bigbreak
+    \noindent
+    \underline{\emph{\Large Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics{#2}
+% \newpage
+}
+% macros end here
+
+% **********************************************************
+
+\begin{document}
+\input{./cover}
+\pagenumbering{roman}
+\newpage
+\large{\tableofcontents}
+% \tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{A Python program to create a regular expression to retrieve all words having 5 characters length}
+\section{A Python program to display employee id no.s on x axis and their salaries on y axis in the form of a bar graph for two departments of a company}
+\section{A Python program to display a histogram showing the number of employees in specific age groups.}
+\section{A Python program to create a line graph to show the profits of a company in various years.}
+
+% add problems here
+
+
+\end{document}
+
