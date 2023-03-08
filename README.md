@@ -17,11 +17,11 @@ This is a archive of assignments with solutions of Kazi Nazrul University - Comp
 
 ## Contents 📑
 
-- Third Semester
+- [Third Semester](./Third%20Semester/)
 
-  - [Data Structure (C)](Data_Structure)
+  - [Data Structure (C)](./Third%20Semester/Data%20Structure/)
 
-    1. [x] [Array](Data_Structure/Array/)
+    1. [x] [Array](./Third%20Semester/Data%20Structure/Array/)
 
     - Traversal
     - Searching
@@ -29,7 +29,13 @@ This is a archive of assignments with solutions of Kazi Nazrul University - Comp
     - Insertion
     - Deletion
 
-    2. [x] [Linked List](Data_Structure/Linked_List/)
+    2. [x] [Linked List](./Third%20Semester/Data%20Structure/Linked%20List/)
+
+  - [Python for Data Science](./Third%20Semester/Python%20For%20Data%20Science/)
+
+- [Fourth Semester](./Fourth%20Semester/)
+
+  - [Python](./Fourth%20Semester/Python%20Lab%20/)
 
 ## License
 
