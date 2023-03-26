@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Suman Mondal <suman.mondal@outlook.in>
+% Date: 26 March 2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% **********************************************************
+% Document Settings                                        *
+% **********************************************************
+\usepackage{geometry}
+% \geometry{a4paper, margin=2.5cm}
+\geometry{a4paper,margin=2cm,top=2.5cm,headheight=16pt,headsep=0.1in,heightrounded}
+
+\usepackage{graphicx}
+% \graphicspath{{}}
+
+\usepackage{minted}
+% \usemintedstyle{emacs}
+
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage{multicol}
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{DBMS Lab}
+\rhead{Suman Mondal}
+% \lfoot{\href{https://github.com/thatsuman/knucse-assignment}{View on Github}}
+\lfoot{\href{https://github.com/thatsuman/knucse-assignment}{github.com/thatsuman/knucse-assignment}}
+\rfoot{Page \thepage}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\urlstyle{same}
+
+\usepackage{fontspec}
+% \setromanfont{Source Sans Pro}
+% \setmonofont{Cascadia Code PL}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macros start here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\problem}[3]{
+  \section{#3}
+    \underline{{\LARGE Source Code :}}
+    \inputminted[breaklines,fontsize=\Large]{sql}{#1.sql}
+    \bigbreak
+    \noindent
+    \underline{{\LARGE Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics[width=110mm,scale=0.5]{#2}
+% \newpage
+}
+\newcommand{\subproblem}[3]{
+  \subsection{#3}
+    \underline{\emph{\Large Source Code :}}
+    \inputminted[breaklines]{sql}{#1.sql}
+    \bigbreak
+    \noindent
+    \underline{\emph{\Large Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics{#2}
+% \newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macros end here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Document settings end 
+
+% **********************************************************
+
+\begin{document}
+\include{./cover}
+\pagenumbering{roman}
+\newpage
+\large{\tableofcontents}
+% \tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Assignment 1}
+
+\begin{center}
+  \begin{tabular}{ |c|c|c|c|c| } 
+    \hline 
+     Client No & Name & City & Pin Code & State \\
+    \hline
+      C00001 & Ivan Bayros & Mumbai & 400054 & Maharashtra \\
+      C00002 & Mamta Mazumder & Madras & 780001 & Tamil Nadu \\
+      C00003 & Chhaya Bankar & Mumbai & 400057 & Maharashtra \\
+      C00004 & Ashwini Joshi & Bangalore & 560001 & Karnataka \\
+      C00005 & Hanel Colaco & Mumbai & 400060 & Maharashtra \\
+      C00006 & Deepak Sharma & Mangalore & 560050 & Karnataka \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\problem{../Assignment_1/q1}{../Assignment_1/q1}{Find out the names of all clients}
+\problem{../Assignment_1/q2}{../Assignment_1/q2}{List all clients who are located in Mumbai}
+\problem{../Assignment_1/q3}{../Assignment_1/q3}{Change the city of client no ‘C00005’to ‘Bangalore’}
+\problem{../Assignment_1/q4}{../Assignment_1/q4}{Delete the rows where state holds the value ‘Tamil Nadu’}
+\problem{../Assignment_1/q5}{../Assignment_1/q5}{Add a column balance of data type number and size = 10}
+% \problem{../Assignment_1/q6}{../Assignment_1/q6}{Change the name of the table}
+\problem{../Assignment_1/q7}{../Assignment_1/q7}{Display the record of all clients whose name starting with ‘A’}
+\problem{../Assignment_1/q8}{../Assignment_1/q8}{Display the record of all clients whose name third character is ‘a’}
+\problem{../Assignment_1/q9}{../Assignment_1/q9}{Display the record of all clients whose name end with ‘a’}
+
+
+\end{document}
+
