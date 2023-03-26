@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Suman Mondal <suman.mondal@outlook.in>
+% Date: 26 March 2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% **********************************************************
+% Document Settings                                        *
+% **********************************************************
+\usepackage{geometry}
+% \geometry{a4paper, margin=2.5cm}
+\geometry{a4paper,margin=2cm,top=2.5cm,headheight=16pt,headsep=0.1in,heightrounded}
+
+\usepackage{graphicx}
+% \graphicspath{{}}
+
+\usepackage{minted}
+% \usemintedstyle{emacs}
+
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage{multicol}
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{DBMS Lab}
+\rhead{Suman Mondal}
+% \lfoot{\href{https://github.com/thatsuman/knucse-assignment}{View on Github}}
+\lfoot{\href{https://github.com/thatsuman/knucse-assignment}{github.com/thatsuman/knucse-assignment}}
+\rfoot{Page \thepage}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\urlstyle{same}
+
+\usepackage{fontspec}
+% \setromanfont{Source Sans Pro}
+% \setmonofont{Cascadia Code PL}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macros start here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\problem}[3]{
+  \section{#3}
+    \underline{{\LARGE Source Code :}}
+    \inputminted[breaklines,fontsize=\Large]{sql}{#1.sql}
+    \bigbreak
+    \noindent
+    \underline{{\LARGE Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics[width=110mm,scale=0.5]{#2}
+% \newpage
+}
+\newcommand{\subproblem}[3]{
+  \subsection{#3}
+    \underline{\emph{\Large Source Code :}}
+    \inputminted[breaklines]{sql}{#1.sql}
+    \bigbreak
+    \noindent
+    \underline{\emph{\Large Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics{#2}
+% \newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macros end here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Document settings end 
+
+% **********************************************************
+
+\begin{document}
+\include{./cover}
+\pagenumbering{roman}
+\newpage
+\large{\tableofcontents}
+% \tableofcontents
+\clearpage
+
+\end{document}
+
