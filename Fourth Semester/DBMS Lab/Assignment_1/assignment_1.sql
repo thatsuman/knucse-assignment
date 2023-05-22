@@ -1,5 +1,6 @@
 -- Author: Suman Mondal <suman.mondal@outlook.in>
 -- Date: 26 March 2023
+-- Version: mysql v8.0.32-0ubuntu0.22.04.2 for Linux on x86_64 ((Ubuntu))
 -- Assignment 1 DBMS Lab
 
 -- Creating Table

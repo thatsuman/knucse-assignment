@@ -1,0 +1,1 @@
+SELECT emp_name FROM myEmployee WHERE salary = (SELECT MAX(salary) FROM myEmployee);

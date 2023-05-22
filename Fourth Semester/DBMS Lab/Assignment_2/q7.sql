@@ -1,0 +1,1 @@
+SELECT emp_name FROM  myEmployee WHERE dept IN (SELECT dept FROM myEmployee GROUP BY dept HAVING COUNT(dept) < 2);

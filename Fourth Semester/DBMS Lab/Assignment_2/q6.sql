@@ -1,0 +1,1 @@
+SELECT dept FROM myEmployee GROUP BY dept HAVING COUNT(dept) < 2;

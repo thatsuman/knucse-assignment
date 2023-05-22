@@ -1,0 +1,1 @@
+SELECT MAX(salary) FROM myEmployee WHERE salary < (SELECT MAX(salary) FROM myEmployee);
