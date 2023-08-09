@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "Learn with Sumit Theme - Dracula version",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#ffffff",
+    "terminal.foreground": "#000000"
+  }
+}
