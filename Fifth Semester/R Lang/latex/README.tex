@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Suman Mondal <suman.mondal@outlook.in>
+% Date: 9 August 2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% **********************************************************
+% Document Settings                                        *
+% **********************************************************
+\usepackage{geometry}
+% \geometry{a4paper, margin=2.5cm}
+\geometry{a4paper,margin=2cm,top=2.5cm,headheight=16pt,headsep=0.1in,heightrounded}
+
+\usepackage{graphicx}
+% \graphicspath{{}}
+
+\usepackage{minted}
+% \usemintedstyle{emacs}
+
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage{multicol}
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{R Programming}
+\rhead{Suman Mondal}
+% \lfoot{\href{https://github.com/thatsuman/knucse-assignment}{View on Github}}
+\lfoot{\href{https://github.com/thatsuman/knucse-assignment}{github.com/thatsuman}}
+\rfoot{Page \thepage}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\urlstyle{same}
+
+\usepackage{fontspec}
+% \setromanfont{Source Sans Pro}
+% \setmonofont{Cascadia Code PL}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macros start here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\problem}[3]{
+  \section{#3}
+    \underline{{\LARGE Source Code :}}
+    \inputminted[breaklines,fontsize=\Large]{r}{#1.r}
+    \bigbreak
+    \noindent
+    \underline{{\LARGE Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics[width=80mm,scale=0.5]{#2}
+% \newpage
+}
+\newcommand{\subproblem}[3]{
+  \subsection{#3}
+    \underline{\emph{\Large Source Code :}}
+    \inputminted[breaklines]{r}{#1.r}
+    \bigbreak
+    \noindent
+    \underline{\emph{\Large Program Output :}}
+    \bigbreak
+    \noindent
+    \includegraphics{#2}
+% \newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macros end here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Document settings end 
+
+% **********************************************************
+
+\begin{document}
+\include{./cover}
+\pagenumbering{roman}
+\newpage
+\large{\tableofcontents}
+% \tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Assignment 3}
+
+\problem{../Assignment_3/Q01}{../Assignment_3/outputs/Q01}{Write a R program to print all natural numbers from 1 to n}
+\problem{../Assignment_3/Q02}{../Assignment_3/outputs/Q02}{Write a R program to print all odd number between 1 to 100}
+\problem{../Assignment_3/Q03}{../Assignment_3/outputs/Q03}{Write a R program to find sum of all natural numbers between 1 to n}
+\problem{../Assignment_3/Q04}{../Assignment_3/outputs/Q04}{Write a R program to find sum of all even numbers between 1 to n}
+\problem{../Assignment_3/Q05}{../Assignment_3/outputs/Q05}{Write a R program to count number of digits in a number}
+\problem{../Assignment_3/Q06}{../Assignment_3/outputs/Q06}{Write a R program to calculate sum of digits of a number}
+\problem{../Assignment_3/Q07}{../Assignment_3/outputs/Q07}{Write a R program to calculate product of digits of a number}
+\problem{../Assignment_3/Q08}{../Assignment_3/outputs/Q08}{Write a R program to enter a number and print its reverse}
+\problem{../Assignment_3/Q09}{../Assignment_3/outputs/Q09}{Write a R program to check whether a number is palindrome or not}
+\problem{../Assignment_3/Q10}{../Assignment_3/outputs/Q10}{Write a R program to find power of a number using for loop}
+\problem{../Assignment_3/Q11}{../Assignment_3/outputs/Q11}{Write a R program to find all factors of a number}
+\problem{../Assignment_3/Q12}{../Assignment_3/outputs/Q12}{Write a R program to calculate factorial of a number}
+\problem{../Assignment_3/Q13}{../Assignment_3/outputs/Q13}{Write a R program to find HCF (GCD) of two numbers}
+\problem{../Assignment_3/Q14}{../Assignment_3/outputs/Q14}{Write a R program to find LCM of two numbers}
+\problem{../Assignment_3/Q15}{../Assignment_3/outputs/Q15}{Write a R program to check whether a number is Prime number or not}
+\problem{../Assignment_3/Q16}{../Assignment_3/outputs/Q16}{Write a R program to check whether a number is Armstrong number or not}
+\problem{../Assignment_3/Q17}{../Assignment_3/outputs/Q17}{Write a R program to check whether a number is Perfect number or not}
+\problem{../Assignment_3/Q18}{../Assignment_3/outputs/Q18}{Write a R program to print Fibonacci series up to n terms}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
