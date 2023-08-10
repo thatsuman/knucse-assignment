@@ -1,4 +1,4 @@
-# Q02. Write a R program to print all odd number between 1 to 100.
+# Q02. Write a R program to print all odd number between 1 to 100
 
 print_odd_numbers <- function() {
   for (i in 1:100) {

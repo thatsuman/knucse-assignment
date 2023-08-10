@@ -1,4 +1,4 @@
-# Q01. Write a R program to print all natural numbers from 1 to n.
+# Q01. Write a R program to print all natural numbers from 1 to n
 
 print_natural_numbers <- function(n) {
   if (n <= 0) {
