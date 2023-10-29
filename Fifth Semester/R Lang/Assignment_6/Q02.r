@@ -7,5 +7,4 @@ data <- data.frame(
 )
 
 selected_column <- data$Age
-
 print(selected_column)

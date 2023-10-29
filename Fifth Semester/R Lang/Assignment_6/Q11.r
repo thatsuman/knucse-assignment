@@ -15,5 +15,4 @@ data2 <- data.frame(
 )
 
 result <- anti_join(data1, data2)
-
 print(result)

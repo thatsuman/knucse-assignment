@@ -7,5 +7,4 @@ scores <- c(95, 85, 92, 78)
 grades <- c("A", "B", "A", "C")
 
 data <- data.frame(Name = names, Age = ages, Score = scores, Grade = grades)
-
 print(data)
