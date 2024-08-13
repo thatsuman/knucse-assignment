@@ -1,0 +1,5 @@
+Artificial general intelligence (AGI) is a type of artificial intelligence (AI) that that matches or surpasses human capabilities across a wide range of cognitive tasks.[1] This is in contrast to narrow AI, which is designed for specific tasks.[2] AGI is considered one of various definitions of strong AI.
+
+Creating AGI is a primary goal of AI research and of companies such as OpenAI,[3] DeepMind, and Anthropic. A 2020 survey identified 72 active AGI R&D projects spread across 37 countries.[4]
+
+The timeline for achieving AGI remains a subject of ongoing debate among researchers and experts. As of 2023, some argue that it may be possible in years or decades; others maintain it might take a century or longer; and a minority believe it may never be achieved.[5] There is debate on the exact definition of AGI, and regarding whether modern large language models (LLMs) such as GPT-4 are early, incomplete forms of AGI.[6] AGI is a common topic in science fiction and futures studies. 

@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{fontspec}
+
+% document settings start
+\geometry{a4paper, margin=0.9in}
+\graphicspath{{./outputs/}}
+\usemintedstyle{emacs}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Operating System}
+\rhead{Suman Mondal}
+\lfoot{\href{https://github.com/thatsuman/knucse-assignment}{GitHub}}
+\rfoot{Page \thepage}
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\urlstyle{same}
+
+% \setmainfont{Comfortaa}
+\setmonofont{FantasqueSansMono Nerd Font}
+
+\input{./macro}
+% document settings end
+
+\begin{document}
+\input{./cover}
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Shell Scripting}
+\problem{Q01}{Write a shell script that prints "Kazi Nazrul University" to the terminal}
+\problem{Q02}{Assign a value to a variable in a shell script}
+\problem{Q03}{Write a shell script that takes a user's name as input and greets them}
+\problem{Q04}{Create a shell script that checks if a file exists in the current directory}
+\problem{Q05}{What is the difference between single quotes ('') and double quotes ("") in shell scripting?}
+\problem{Q06}{How do you use the for loop to iterate through a list of values?}
+\problem{Q07}{Write a shell script that calculates the sum of integers from 1 to N using a loop}
+\problem{Q08}{Create a script that searches for a specific word in a file and counts its occurrences}
+\problem{Q09}{Write a function in a shell script that calculates the factorial of a given number}
+\problem{Q10}{Write a script that generates a secure random password}
+\problem{Q11}{How can you use arithmetic operations within a shell script?}
+\problem{Q12}{Create a script that checks if a network host is reachable}
+\problem{Q13}{Write a Shell Script to Find the Greatest Element in an Array}
+\problem{Q14}{Write a scripte to calculate the sum of Elements in an Array}
+\problem{Q15}{Check if a number is Even or Odd}
+
+
+\end{document}

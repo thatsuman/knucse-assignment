@@ -3,5 +3,6 @@
   "workbench.colorCustomizations": {
     "terminal.background": "#ffffff",
     "terminal.foreground": "#000000"
-  }
+  },
+  "r.lsp.promptToInstall": false
 }
